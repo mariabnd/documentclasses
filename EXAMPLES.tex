@@ -1,0 +1,74 @@
+\documentclass[DIV=16, 11pt]{scrartcl}
+
+\RequirePackage{shellesc}
+
+\ShellEscape{xelatex proc-exmpl}
+\ShellEscape{bibtex proc-exmpl}
+\ShellEscape{xelatex proc-exmpl}
+\ShellEscape{xelatex proc-exmpl}
+
+\ShellEscape{xelatex paper-exmpl}
+\ShellEscape{bibtex paper-exmpl}
+\ShellEscape{xelatex paper-exmpl}
+\ShellEscape{xelatex paper-exmpl}
+
+\ShellEscape{xelatex article-exmpl}
+\ShellEscape{bibtex article-exmpl}
+\ShellEscape{xelatex article-exmpl}
+\ShellEscape{xelatex article-exmpl}
+
+\ShellEscape{xelatex amsart-exmpl}
+\ShellEscape{bibtex amsart-exmpl}
+\ShellEscape{xelatex amsart-exmpl}
+\ShellEscape{xelatex amsart-exmpl}
+
+\ShellEscape{xelatex scrartcl-exmpl}
+\ShellEscape{bibtex scrartcl-exmpl}
+\ShellEscape{xelatex scrartcl-exmpl}
+\ShellEscape{xelatex scrartcl-exmpl}
+
+\ShellEscape{xelatex ntg-exmpl}
+\ShellEscape{bibtex ntg-exmpl}
+\ShellEscape{xelatex ntg-exmpl}
+\ShellEscape{xelatex ntg-exmpl}
+
+\usepackage{pdfpages}
+
+\usepackage{multicol}
+\usepackage{verbatim}
+
+\begin{document}
+
+What follows is a overview of the different \texttt{documentclass} article types. The aim of this was to see what they look like by default (meaning before changing margins and fontsizes etc.). Each document contains
+\verbatiminput{contents.tex}
+the only thing that is different is the \texttt{documentclass}. This is not exhaustive as multiple publishers have their own. The ones considered are listed alphabetically below. NB \texttt{revtex} is not included because it clashes with the \texttt{abstract} package
+
+\section*{Examples}
+
+\begin{multicols}{2}
+\vbox{\texttt{amsart}~\\
+\frame{\includegraphics[width = 0.25\paperwidth]{amsart-exmpl.pdf}}
+}
+
+\vbox{\texttt{article}~\\
+\frame{\includegraphics[width = 0.25\paperwidth]{article-exmpl.pdf}}
+}
+
+\vbox{\texttt{artikel1 (ntg)}~\\
+\frame{\includegraphics[width = 0.25\paperwidth]{ntg-exmpl.pdf}}
+}
+
+\vbox{\texttt{paper}~\\
+\frame{\includegraphics[width = 0.25\paperwidth]{paper-exmpl.pdf}}
+}
+
+\vbox{\texttt{proc}~\\
+\frame{\includegraphics[width = 0.25\paperwidth]{proc-exmpl.pdf}}
+}
+
+\vbox{\texttt{scrartcl (komascript)}~\\
+\frame{\includegraphics[width = 0.25\paperwidth]{scrartcl-exmpl.pdf}}
+}
+\end{multicols}
+
+\end{document}
